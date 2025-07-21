@@ -8,7 +8,7 @@ export function Dashboard() {
   const [username, setUsername] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/v1/user/decode", {
+      .get("https://swiftpay-backend-v66r.onrender.com/api/v1/user/decode", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -21,7 +21,7 @@ export function Dashboard() {
   const [balance, setBalance] = useState(0);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/v1/account/balance", {
+      .get("https://swiftpay-backend-v66r.onrender.com/api/v1/account/balance", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -34,7 +34,7 @@ export function Dashboard() {
   const [filter, setFilter] = useState("");
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/v1/user/bulk?filter=${filter}`, {
+      .get(`https://swiftpay-backend-v66r.onrender.com/api/v1/user/bulk?filter=${filter}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
