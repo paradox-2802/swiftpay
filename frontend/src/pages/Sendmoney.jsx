@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export function SendMoney() {
+  const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const location = useLocation();
   const { id, name } = location.state || {};
@@ -20,6 +21,7 @@ export function SendMoney() {
         },
       }
     );
+    navigate("/dashboard")
   }
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
