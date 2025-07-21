@@ -21,7 +21,7 @@ export function SendMoney() {
         },
       }
     );
-    navigate("/dashboard")
+    navigate("/dashboard");
   }
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
