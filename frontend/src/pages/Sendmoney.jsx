@@ -21,6 +21,7 @@ export function SendMoney() {
         },
       }
     );
+    alert("Payment Done ✅")
     navigate("/dashboard");
   }
   return (
